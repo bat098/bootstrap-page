@@ -48,27 +48,8 @@ li {
   background-color: black;
 }
 
-#start {
-  width: 100%;
-}
-#start::before {
-  content: '';
-  position: absolute;
-  width: 1900px;
-  height: 4000px;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-image: url('/src/Group\ 924.png');
-  background-repeat: no-repeat;
-  background-position-x: center;
-  opacity: 0.2;
-  z-index: 2;
-}
-
 section {
   background-color: $white;
-  // background-color: lightseagreen;
   border-radius: 30px;
   margin-bottom: 110px;
 }
@@ -82,7 +63,7 @@ section {
   }
   .uiux {
     height: 126px;
-    background-image: url('./uiux.svg');
+    background-image: url('./img/uiux.svg');
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 10px;
@@ -254,7 +235,6 @@ section {
   }
   .envelopeBox {
     position: relative;
-    // background-color: royalblue;
     height: 666px;
   }
   .envelopeBox::after {
@@ -275,7 +255,7 @@ section {
     transform: translateY(-50%);
     width: 120%;
     height: 120%;
-    background-image: url('./envelope.svg');
+    background-image: url('./img/envelope.svg');
     background-repeat: no-repeat;
     background-position-y: center;
 
