@@ -1,0 +1,354 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1460px,
+);
+
+$orange: #f46632;
+$dark: #000000;
+
+$font-family-sans-serif: PT Sans, system-ui, -apple-system, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.myBtn {
+  border: none;
+  background-color: $orange;
+  color: $white;
+  font-weight: bold;
+}
+
+.myBtn-small {
+  font-size: 16px;
+  border-radius: 12px;
+  height: 48px;
+  min-width: 200px;
+}
+
+.bg {
+  width: 100%;
+  height: 780px;
+  background-color: black;
+}
+
+#start {
+  width: 100%;
+}
+#start::before {
+  content: '';
+  position: absolute;
+  width: 1900px;
+  height: 4000px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('/src/Group\ 924.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+section {
+  background-color: $white;
+  // background-color: lightseagreen;
+  border-radius: 30px;
+  margin-bottom: 110px;
+}
+
+.product {
+  margin-top: -668px;
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .uiux {
+    height: 126px;
+    background-image: url('./uiux.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+    p {
+      font-size: 38px;
+      color: #8d8d8d;
+    }
+  }
+  p {
+    font-size: 23px;
+    line-height: 55px;
+  }
+  button {
+    margin-top: 60px;
+    background-color: $orange;
+    color: $white;
+    border: none;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    height: 72px;
+    width: 100%;
+    max-width: 390px;
+  }
+}
+
+.titleBox {
+  text-align: center;
+  position: relative;
+  .titleBg {
+    font-size: 120px;
+    font-weight: bold;
+    opacity: 0.05;
+  }
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    font-weight: bold;
+  }
+}
+
+.experience {
+  .btn {
+    border-radius: 16px;
+    padding: 18px;
+  }
+  .btn-group {
+    width: 100%;
+    max-width: 1016px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 48px;
+  }
+}
+
+.course {
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 52px;
+  }
+  li {
+    margin-bottom: 52px;
+    font-size: 16px;
+  }
+  .check {
+    margin-right: 24px;
+  }
+  .priceBox {
+    background-color: $dark;
+    color: $white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 475px;
+    p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 38px;
+    }
+    p:first-child {
+      position: relative;
+    }
+    p:first-child::before {
+      content: '';
+      position: absolute;
+      width: 110%;
+      height: 1px;
+      transform: translateX(-5%);
+      background-color: $white;
+    }
+  }
+  .highPrice {
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  .lowPrice {
+    font-size: 34px;
+    margin-right: 30px;
+  }
+  .smallName {
+    font-size: 19px;
+  }
+  .bigName {
+    font-size: 25px;
+  }
+  .info {
+    margin-top: 64px;
+    color: #999;
+    padding: 50px 0px;
+    border-top: 1px solid #eee;
+  }
+}
+
+::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+.contact {
+  background-color: $dark;
+  color: $white;
+  overflow: hidden;
+
+  h2 {
+    font-size: 34px;
+    margin-bottom: 32px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 48px;
+  }
+  .email {
+    background-color: #333;
+    color: #e5e5e5;
+    border: none;
+    border-radius: 16px;
+    height: 62px;
+    padding-left: 40px;
+    font-size: 22px;
+    width: 100%;
+    max-width: 558px;
+    margin-bottom: 100px;
+  }
+  form {
+    position: relative;
+  }
+  .messageBox {
+    position: absolute;
+    top: 80px;
+    font-size: 18px;
+  }
+
+  .success,
+  .error {
+    display: none;
+  }
+  .success.show,
+  .error.show {
+    display: block;
+    margin-right: 20px;
+  }
+  .envelopeBox {
+    position: relative;
+    // background-color: royalblue;
+    height: 666px;
+  }
+  .envelopeBox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+    z-index: 1;
+  }
+  .envelopeBox::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120%;
+    height: 120%;
+    background-image: url('./envelope.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+
+    opacity: 0.2;
+  }
+  .envelope {
+    max-width: 270px;
+    z-index: 100;
+  }
+}
+
+footer {
+  background-color: $white;
+  .container {
+    min-height: 200px;
+  }
+  .socialBox {
+    max-width: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1460px) {
+  section {
+    padding: 100px 110px;
+  }
+}
+@media only screen and (max-width: 1459px) {
+  section {
+    padding: 20px 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section {
+    text-align: center;
+  }
+  .product {
+    button {
+      align-self: center;
+      margin-bottom: 40px;
+    }
+  }
+  .course {
+    ul {
+      text-align: left;
+    }
+    .priceBox {
+      padding: 40px 0;
+    }
+  }
+  .contact {
+    text-align: center;
+    padding: 40px 0;
+    .envelopeBox::after,
+    .envelopeBox::before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  footer {
+    padding: 40px 0;
+    .container {
+      flex-direction: column;
+    }
+  }
+  .titleBox .titleBg {
+    font-size: 90px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .titleBox .titleBg {
+    font-size: 50px;
+  }
+}
