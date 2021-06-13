@@ -15,6 +15,15 @@ $grid-breakpoints: (
   xxl: 1520px,
 );
 
+$my-grid-breakpoints-down: (
+  xs: 0,
+  sm: 575px,
+  md: 767px,
+  lg: 991px,
+  xl: 1199px,
+  xxl: 1519px,
+);
+
 $orange: #f46632;
 $dark: #000000;
 
@@ -289,17 +298,21 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1460px) {
+@media only screen and (min-width: map-get($grid-breakpoints , xxl)) {
   section {
     padding: 100px 110px;
   }
 }
-@media only screen and (max-width: 1459px) {
+@media only screen and (max-width: map-get($my-grid-breakpoints-down , xxl)) {
+  .product {
+    margin-top: -730px;
+  }
   section {
     padding: 20px 20px;
   }
 }
-@media only screen and (max-width: 767px) {
+
+@media only screen and (max-width: map-get($my-grid-breakpoints-down , md)) {
   section {
     text-align: center;
   }
@@ -336,8 +349,24 @@ footer {
     font-size: 90px;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: map-get($my-grid-breakpoints-down , sm)) {
+  .product {
+    margin-top: -780px;
+  }
+  .bg {
+    background-color: transparent;
+  }
   .titleBox .titleBg {
     font-size: 50px;
+  }
+  .experience {
+    .btn-group {
+      label {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
