@@ -6,6 +6,15 @@ $container-max-widths: (
   xxl: 1460px,
 );
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1520px,
+);
+
 $orange: #f46632;
 $dark: #000000;
 
